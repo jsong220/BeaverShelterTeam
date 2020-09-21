@@ -7,13 +7,10 @@ build times.
 the project directory.
 2. Run docker-compose build and grab a cup of tea, the web container will
 take awhile to complete.
-3. Run docker-compose up
-a. This will start up the main web container serving the application as well as
+3. Run docker-compose up. This will start up the main web container serving the application as well as
 other dependencies such as the database and a Redis server.
 4. Open a new terminal window and run docker-compose run web rake
-db:create db:migrate
-a. This will initialize the database used by the application
-b. Once this has completed, run docker-compose run web rake
+db:create db:migrate. This will initialize the database used by the application. Once this has completed, run docker-compose run web rake
 db:seed to create an admin user
 5. The website should now be accessible at http://localhost:3000 and the admin
 interface should be accessible at http://localhost:3000/admin/login
